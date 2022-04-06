@@ -1,7 +1,6 @@
 import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { aws_s3 as s3 } from 'aws-cdk-lib';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class AwsCdkDemoStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -11,10 +10,5 @@ export class AwsCdkDemoStack extends Stack {
     new s3.Bucket(this, 'MyCdkDemoBucket', {
       versioned: true
     });
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'AwsCdkDemoQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
   }
 }
